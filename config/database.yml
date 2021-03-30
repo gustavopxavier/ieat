@@ -6,11 +6,11 @@ default: &default
 
 development:
   <<: *default
-  database: ieat_development
+  database: ieat_development_dio
 
 test:
   <<: *default
-  database: ieat_test
+  database: ieat_test_dio
 
 production:
   <<: *default
