@@ -2,25 +2,10 @@
 <p>Hello <%= @email %></p>
 
 <% if user_signed_in? %>
-    <% if user.restaurant? %>
-        <p>Seus produtos, <%= current_user.restaurant.name %></p>
-        <table>
-            <thead>
-                <tr>
-                    <th>nome</th>
-                    <th>valor</th>
-                </tr>
-            </thead>
-
-            <tbody>
-                <% current_user.restaurant.products.each do |product| %>
-                    <tr>
-                        <td><%= product.name %></td>
-                        <td><%= product.value %></td>
-                    </tr>
-                <% end %>
-            </tbody>
-        </table>
+    <% if current_user.restaurant? %>
+        <%= render 'restaurant' %>
+    <% elsif current_user.customer? %>
+        <%= render 'customer'%>
     <% end %>
 
 
