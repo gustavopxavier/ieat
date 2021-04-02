@@ -14,13 +14,19 @@ gem 'turbolinks', '~> 5'
 gem 'webpacker', '~> 5.0'
 
 group :development, :test do
+  gem 'factory_bot_rails'
+  gem 'faker'
   gem 'pry'
+  gem 'rspec-rails'
+  gem 'shoulda-matchers'
+
 
 group :development do
   gem 'listen', '~> 3.3'
   gem 'rack-mini-profiler', '~> 2.0'
   gem 'spring'
   gem 'web-console', '>= 4.1.0'
+  
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
